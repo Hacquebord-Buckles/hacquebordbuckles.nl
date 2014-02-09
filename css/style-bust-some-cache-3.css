@@ -24,16 +24,16 @@ a:hover, a:active { outline: 0; }
 }
 
 body {
-  color: #fff;
+  color: #000;
 }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
 a:hover {
-  color: #fff;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -75,7 +75,7 @@ html, body {
 }
 
 body {
-  background-color: #000;
+  background-color: #fff;
 }
 
 #container {
@@ -103,12 +103,12 @@ body {
 
   padding: 2px 2px 0 2px;
 
-  background-color: rgb(255, 240, 205);
-  background-color: rgba(255, 240, 205, 0.3);
+  background-color: rgb(0, 15, 50);
+  background-color: rgba(0, 15, 50, 0.3);
 
   border: 8px solid;
   border-color: black;
-  border-color: rgba(0, 0, 0, 0.85);
+  border-color: rgba(255, 255, 255, 0.85);
   
   border-bottom: none;
 
@@ -122,7 +122,7 @@ body {
 
 #container .callout .inner {
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 10px;
 }
 

@@ -97,7 +97,7 @@ body {
 #container .callout {
   position: absolute;
   bottom: 0;
-  right: 6%;
+  right: 2%;
 
   width: 275px;
 
@@ -196,13 +196,6 @@ body {
 }
 
 /* Responsive */
-@media screen and (min-width: 1500px) {
-  #container {
-    background-image: url(../img/bg_large.jpg);
-    min-height: 900px;
-  }
-}
-
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (   min--moz-device-pixel-ratio: 2),
        only screen and (     -o-min-device-pixel-ratio: 2/1),

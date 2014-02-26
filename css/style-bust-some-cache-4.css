@@ -87,7 +87,7 @@ body {
   min-width: 950px;
   min-height: 650px;
 
-  background: url('../img/bg.jpg') no-repeat center center;
+  background: url('../img/bg-bust-some-cache.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -196,13 +196,6 @@ body {
 }
 
 /* Responsive */
-@media screen and (min-width: 1500px) {
-  #container {
-    background-image: url(../img/bg_large.jpg);
-    min-height: 900px;
-  }
-}
-
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (   min--moz-device-pixel-ratio: 2),
        only screen and (     -o-min-device-pixel-ratio: 2/1),

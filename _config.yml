@@ -1,5 +1,6 @@
 # Site settings
 title: "Hacquebord & Buckles"
+description:
 
 # Build settings
 markdown: kramdown

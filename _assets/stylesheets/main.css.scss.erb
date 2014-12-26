@@ -2,6 +2,8 @@
  *= require fonts
  */
 
+$breakpoint: 860px;
+
 html,
 body {
   width: 100%;
@@ -10,16 +12,17 @@ body {
 
 body {
   position: relative;
-  min-width: 950px;
   min-height: 650px;
   margin: 0;
 
-  background-image: url('<%= asset_path "cover.jpg" %>');
-  background-color: black;
-  background-size: cover;
-  background-repeat: no-repeat;
-
   color: white;
+
+  @media (max-width: $breakpoint) {
+    position: static;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+  }
 }
 
 a {
@@ -32,16 +35,40 @@ a:hover {
   text-decoration: underline;
 }
 
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+
+  background-image: url('<%= asset_path "cover.jpg" %>');
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (max-width: $breakpoint) {
+    position: fixed;
+
+    background-image: url('<%= asset_path "cover-mobile.jpg" %>');
+  }
+}
+
 .callout {
   position: absolute;
   bottom: 0;
   right: 6%;
 
-  box-sizing: border-box;
   width: 275px;
-  padding: 0 10px;
 
-  background-color: rgba(0,0,0,.85);
+  border: 8px solid rgba(0,0,0,.85);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+
+  background-color: rgba(255,240,205,.3);
 
   font-family: 'Blanch Caps', sans-serif;
   font-weight: 200;
@@ -49,22 +76,32 @@ a:hover {
   line-height: 30px;
   text-align: center;
 
-  &:before {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: 0;
-    z-index: -10;
+  @media (max-width: $breakpoint) {
+    position: relative;
+    top: calc(100% - 140px);
+    left: auto;
+    right: auto;
+    bottom: auto;
 
-    content: '';
+    width: 100%;
 
-    border: 8px solid rgba(0,0,0,.85);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
 
-    background-color: rgba(255,240,205,.3);
+  .fancy-border-thingy {
+    margin: 2px 2px 0 2px;
+    padding: 0 10px;
+
+    // Prevent collapsing margins
+    overflow: hidden;
+
+    background-color: rgba(0,0,0,.85);
+
+    @media (max-width: $breakpoint) {
+      margin: 2px 0 0 0;
+    }
   }
 
   h1 {
@@ -148,6 +185,7 @@ a:hover {
 }
 
 .credits {
+  display: none;
   position: absolute;
   left: 10px;
   bottom: 10px;

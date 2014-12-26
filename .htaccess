@@ -1,3 +1,11 @@
+# Redirect hqbk.nl to hacquebordbuckles.nl
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP_HOST} ^(.*)hqbk\.nl(.*)$ [NC]
+    RewriteRule ^ http://hacquebordbuckles.nl%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 # Apache Server Configs v2.11.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 

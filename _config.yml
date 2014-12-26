@@ -1,0 +1,16 @@
+# Site settings
+title: "Hacquebord & Buckles"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude: [autoprefixer.yml, Gemfile, Gemfile.lock]
+
+# Assets
+assets:
+    debug: true
+    sources:
+        - _assets/fonts
+        - _assets/images
+        - _assets/javascripts
+        - _assets/stylesheets
